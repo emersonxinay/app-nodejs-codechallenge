@@ -1,0 +1,37 @@
+.
+├── .DS_Store
+├── .eslintrc.js
+├── .gitignore
+├── .prettierrc
+├── Dockerfile
+├── README.md
+├── README1.md
+├── docker-compose.yml
+├── estructura.txt
+├── nest-cli.json
+├── package-lock.json
+├── package.json
+├── src
+│   ├── anti-fraud.service.ts
+│   ├── app.controller.spec.ts
+│   ├── app.controller.ts
+│   ├── app.module.ts
+│   ├── app.service.ts
+│   ├── main.ts
+│   └── transactions
+│       ├── dto
+│       │   ├── create-transaction.dto.ts
+│       │   └── transaction.dto.ts
+│       ├── transaction.entity.ts
+│       ├── transactions.controller.ts
+│       ├── transactions.module.ts
+│       └── transactions.service.ts
+├── test
+│   ├── app.e2e-spec.ts
+│   ├── jest-e2e.json
+│   ├── setup.ts
+│   └── transactions.e2e-spec.ts
+├── tsconfig.build.json
+└── tsconfig.json
+
+2833 directories, 23093 files
