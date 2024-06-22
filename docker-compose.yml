@@ -1,13 +1,14 @@
-version: "3.7"
+version: '3.7'
+
 services:
   postgres:
     image: postgres:14
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=yapeame
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: yapeame
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
@@ -22,7 +23,7 @@ services:
 
   kafka:
     image: confluentinc/cp-enterprise-kafka:5.5.3
-    depends_on: 
+    depends_on:
       - zookeeper
     environment:
       KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
@@ -36,6 +37,23 @@ services:
     networks:
       - backend
 
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - kafka
+      - zookeeper
+    networks:
+      - backend
+
 networks:
   backend:
     driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local

@@ -1,11 +1,10 @@
 {
   "type": "postgres",
-  "host": "postgres",
+  "host": "postgres", 
   "port": 5432,
   "username": "postgres",
-  "password": "postgres",
+  "password": "emerson123",
   "database": "yapeame",
-  "synchronize": true,
-  "logging": true,
-  "entities": ["dist/**/*.entity{.ts,.js}"]
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": true
 }

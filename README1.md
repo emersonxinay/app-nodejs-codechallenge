@@ -9,6 +9,10 @@ Don't forget that the proper way to submit your work is to fork the repo and cre
 - [Tech Stack](#tech-stack)
   - [Optional](#optional)
 - [Send us your challenge](#send-us-your-challenge)
+- [El paso a paso](#el-paso-a-paso)
+  - [Creando el proyecto con nestjs](#creando-el-proyecto-con-nestjs)
+  - [Instalar dependencias](#instalar-dependencias)
+  - [completando la estructura de careptas y archivos](#completando-la-estructura-de-careptas-y-archivos)
 
 # Problem
 
@@ -83,3 +87,19 @@ When you finish your challenge, after forking a repository, you **must** open a 
 
 If you have any questions, please let us know.
 
+
+# El paso a paso
+## Creando el proyecto con nestjs
+```bash
+nest new .
+```
+## Instalar dependencias 
+```bash
+npm install @nestjs/typeorm typeorm pg kafkajs
+```
+
+## completando la estructura de careptas y archivos
+```bash
+mkdir -p src/transactions/dto
+touch src/app.module.ts src/main.ts src/anti-fraud.service.ts src/transactions/transactions.module.ts src/transactions/transaction.entity.ts src/transactions/dto/create-transaction.dto.ts src/transactions/dto/transaction.dto.ts src/transactions/transactions.controller.ts src/transactions/transactions.service.ts docker-compose.yml Dockerfile test/jest-e2e.json test/setup.ts test/app.e2e-spec.ts test/transactions.e2e-spec.ts
+````
