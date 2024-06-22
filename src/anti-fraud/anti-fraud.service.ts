@@ -1,7 +1,8 @@
+// src/anti-fraud/anti-fraud.service.ts
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { Kafka, EachMessagePayload } from 'kafkajs';
-import { TransactionsService } from './transactions/transactions.service';
-import { TransactionStatus } from './transactions/transaction.entity';
+import { TransactionsService } from '../transactions/transactions.service';
+import { TransactionStatus } from '../transactions/transaction.entity';
 
 @Injectable()
 export class AntiFraudService implements OnModuleInit {

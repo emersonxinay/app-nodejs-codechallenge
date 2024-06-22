@@ -6,9 +6,9 @@ import {
 } from 'typeorm';
 
 export enum TransactionStatus {
-  PENDING = 'pending',
-  APPROVED = 'approved',
-  REJECTED = 'rejected',
+  PENDING = 'PENDING',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
 }
 
 @Entity()
@@ -16,16 +16,7 @@ export class Transaction {
   @PrimaryGeneratedColumn('uuid')
   transactionExternalId: string;
 
-  @Column('uuid')
-  accountExternalIdDebit: string;
-
-  @Column('uuid')
-  accountExternalIdCredit: string;
-
   @Column()
-  tranferTypeId: number;
-
-  @Column('decimal')
   value: number;
 
   @Column({
